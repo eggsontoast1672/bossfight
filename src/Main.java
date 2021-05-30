@@ -1,10 +1,13 @@
 package src;
 
+import java.util.Scanner;
+
 public class Main {
 
   public static Boss boss = new Boss();
   public static Player player = new Player();
   public static Serum serum = new Serum();
+  public static Scanner scanner = new Scanner(System.in);
 
   public static boolean gameOver = false;
 
@@ -24,12 +27,95 @@ public class Main {
 
   }
 
-  public static void main(String[] args) {
+  public static void getAttackType() {
+    
+    System.out.print("What kind of attack do you want to use? (Fire, Ice, Earth): ");
+    String attack = scanner.next();
+
+    switch (attack.toLowerCase()) {      
+      
+      case "fire":
+      player.fireAttack(boss);
+      break;
+
+      case "ice":
+      player.iceAttack(boss);
+      break;
+
+      case "earth":
+      player.earthAttack(boss);
+      break;
+
+      default:
+      System.out.println("Attack type not recognized. Please try again.");
+      break;
+
+    }
+
+  }
+
+  public static void getItemType(/* TODO (2) */) {
+
+    System.out.println("Which item do you want to use? (Serum, Super Serum, Stamina Fruit): ");
+    String item = scanner.next();
+
+    switch (item.toLowerCase()) {
+
+      case "serum":
+      serum.useOnTarget(player);
+      break;
+
+      case "super serum":
+      // TODO Write super serum class
+      break;
+
+      case "stamina fruit":
+      // TODO Write stamina fruit class
+      break;
+
+      default:
+      System.out.println("Item not recognized. Please try again.");
+      break;
+
+    }
+
+  }
+
+  public static void getPlayerAction(/* TODO (1) */) {
+
+    System.out.print("What would you like to do? (Attack, Item, Flee): ");
+    String action = scanner.next();
+
+    switch (action.toLowerCase()) {
+
+      case "attack":
+      getAttackType();
+      break;
+
+      case "item":
+      getItemType();
+      break;
+
+      case "flee":
+      // TODO Write this method!
+      break;
+
+      default:
+      System.out.println("Action not recognized. Please try again.");
+      break;
+
+    }
+
+  }
+
+  public static void main(String[] args /* TODO (1) */) {
 
     while (!gameOver) {
-      // Game logic
+      // TODO Write game logic
     }
 
   }
   
 }
+
+// Hello ;)
