@@ -5,3 +5,5 @@ This is a refactored version of one of my oldest projects. I thought I'd share i
 The project is based off of an old python project I made a long time ago. The mediafire link to the old project source code is linked below.
 
 https://www.mediafire.com/file/3weya7npbbom908/Dungeon_Crawl.zip/file
+
+NOTE: This repository is no longer in development, but I'm keeping it around for a little while longer just in case. For updates, please see my other repository `dungeon-crawl`.
